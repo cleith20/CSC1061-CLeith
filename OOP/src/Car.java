@@ -1,11 +1,23 @@
 
 public class Car {
+	
+	private static final int MAX_WHEELS = 4;
+	
 	// Data Members
-	private String color;
+	private String color = "Grey";
 	private double amountOfGas;
 	private int mileage;
 	private int grndClearanceFt;
 	private int grndClearanceInch;
+	private int id;
+	private boolean isClean = false;
+	
+	//Static is used to prevent count from going to every instance
+	static private int count = 0;
+	
+	//have radio but also need to make the new object
+	private Radio radio = new Radio();
+	private Wheel[] wheels = new Wheel[MAX_WHEELS];
 	
 	// Constructors
 		//A constructor doesn't have a return type, return type comes after public for methods
@@ -15,9 +27,14 @@ public class Car {
 		color = rcolor;
 		amountOfGas = 1.0;
 		mileage = 5;
+		count++;
+		id = count;
+		assignWheels();
 	}
 	public Car() {
-		
+		count++;
+		id = count;
+		assignWheels();
 	}
 	//to refer to the object you're in use this.
 	//deciding what you need to give to people/provide
@@ -25,6 +42,9 @@ public class Car {
 		this.color = color;
 		amountOfGas = gas;
 		mileage = 0;
+		count++;
+		id = count;
+		assignWheels();
 	}
 	
 	// Getters and Setters (Accessors and Mutators)
@@ -54,7 +74,22 @@ public class Car {
 		this.grndClearanceFt = grndClearance/12;
 		this.grndClearanceInch = grndClearance % 12;
 	}
+	public int getId() {
+		return id;
+	}
+	public static int getCount() {
+		return count;
+	}
+	public boolean isClean() {
+		return isClean;
+	}
 	
+	public Radio getRadio() {
+		return radio;
+	}
+	public Wheel[] getWheels() {
+		return wheels;
+	}
 	
 	// Methods
 	
@@ -63,10 +98,21 @@ public class Car {
 			System.out.print("+");
 		}
 		mileage += numMiles;
-		amountOfGas -= numMiles;
 		System.out.println();
 	}
 	
+	public void selfCleanCar() {
+		isClean = true;
+	}
+	//static doesn't auto know what to set, must give something
+	public static void cleanCar(Car car) {
+		car.isClean = true;
+	}
+	private void assignWheels() {
+		for(int i = 0; i < wheels.length;i++) {
+			wheels[i] = new Wheel("Alloy", 16);
+		}
+}
 	//toString()
 		//specific method
 		//this overrides the original toString
