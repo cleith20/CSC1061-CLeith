@@ -23,6 +23,7 @@ public class Car {
 		//A constructor doesn't have a return type, return type comes after public for methods
 		//if a method has the same name as a class, you know it's a constructor
 		//Methods can have the same name so long as the signature(arguments) are different
+		//How you want the user to use an object
 	public Car(String rcolor){
 		color = rcolor;
 		amountOfGas = 1.0;
@@ -51,6 +52,7 @@ public class Car {
 		//getters provide a way to access the values of the properties
 		//setters give way to set the information 
 		//don't need getters and setters for everything
+		//how the user access the object
 	public String getColor() {
 		//returning the color value which is a String
 		//RETURNS
@@ -92,6 +94,7 @@ public class Car {
 	}
 	
 	// Methods
+		//actions your object does
 	
 	public void drive(int numMiles) {
 		for(int i = 0; i < numMiles; i++) {
@@ -116,6 +119,7 @@ public class Car {
 	//toString()
 		//specific method
 		//this overrides the original toString
+		//describe the object in words
 	@Override
 	public String toString() {
 		return "Car: \nColor: " + color + "\nAmount of Gas: "
