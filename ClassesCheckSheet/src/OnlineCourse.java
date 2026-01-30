@@ -1,8 +1,8 @@
 
 public class OnlineCourse extends Course{
 
-	public OnlineCourse() {
-		super();
+	public OnlineCourse(String courseName, int numOfStu, int maxStu, int creds) {
+		super(courseName, numOfStu, maxStu, creds);
 	}
 
 	

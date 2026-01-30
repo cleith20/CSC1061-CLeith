@@ -7,6 +7,12 @@ public class Dog extends Animal{
 		this.barkVol = barkVol;
 	}
 	
+	
+	 public int getBarkVol() {
+		return barkVol;
+	}
+
+
 	 @Override
 	 public String makesSound() {
 			return "Woof";

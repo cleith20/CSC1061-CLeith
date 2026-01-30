@@ -50,7 +50,7 @@ public class Course {
 
 	@Override
 	public String toString() {
-		return "Course\nCourse Name = " + courseName + "\nNumber of Students = " + numStudents 
+		return "\nCourse Name = " + courseName + "\nNumber of Students = " + numStudents 
 				+ "\nMax Number of Students = " + maxStudents + "\nCredits = " + credits;
 	}
 	

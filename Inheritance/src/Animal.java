@@ -45,7 +45,7 @@ public class Animal {
 	
 	@Override
 	public String toString() {
-		return "Animal name = " + name + ", weight = " + weight + ", height = " + height;
+		return "Animal Name = " + name + ", Weight = " + weight + ", Height = " + height;
 	}
 	
 	
