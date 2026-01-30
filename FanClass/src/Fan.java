@@ -65,9 +65,9 @@ public class Fan {
 		this.color = color;
 	}
 	
-	public String isOn(boolean on) {
-		if(on = true) {
-			return "\nThe fan is on :)";
+	public String fanOn() {
+		if(isOn()) {
+			return "\nFan speed = " + speed + " \nThe fan is on :)";
 		}
 		else {
 			return "\nThe fan is off";
@@ -77,8 +77,8 @@ public class Fan {
 	//To String to convert data into a string
 	@Override
 	public String toString() {
-		return "ID = " + id + "\nFan speed = " + speed 
-				+ "\nRadius = " + radius + "\nColor = " + color + "\n"+ isOn();
+		return "ID = " + id + "\nRadius = " + radius + "\nColor = " + color + fanOn() + "\n";
+		
 		}
 	}
 	
