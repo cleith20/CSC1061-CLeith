@@ -1,13 +1,14 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Driver {
 
 	public static void main(String[] args) {
-		InPersonCourse course1 = new InPersonCourse();
-		FullRemoteCourse course2 = new FullRemoteCourse("donald.duck@frontrange.edu");
-		RealTimeRemoteCourse course3 = new RealTimeRemoteCourse("zoom.com");
+		InPersonCourse course1 = new InPersonCourse("CSC1061", 20, 20, 3);
+		FullRemoteCourse course2 = new FullRemoteCourse("CSC1061", 20, 20, 3,"donald.duck@frontrange.edu");
+		RealTimeRemoteCourse course3 = new RealTimeRemoteCourse("CSC1061", 20, 20, 3,"zoom.com");
 
-		ArrayList<Course> courseList = new ArrayList<>();
+		List<Course> courseList = new ArrayList<>();
 		
 		courseList.add(course1);
 		courseList.add(course2);

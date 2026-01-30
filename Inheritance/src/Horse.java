@@ -7,6 +7,10 @@ public class Horse extends Animal{
 		this.speed = speed;
 	}
 	
+	 public double getSpeed() {
+		return speed;
+	}
+
 	 @Override
 	 public String makesSound() {
 			return "Neigh";
@@ -14,7 +18,7 @@ public class Horse extends Animal{
 
 	@Override
 	public String toString() {
-		return super.toString() + "Speed = " + speed;
+		return super.toString() + " Speed = " + speed;
 	}
 	
 	

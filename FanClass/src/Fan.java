@@ -64,15 +64,21 @@ public class Fan {
 	public void setColor(String color) {
 		this.color = color;
 	}
-
-	@Override
-	public String toString() {
+	
+	public String isOn(boolean on) {
 		if(on = true) {
-		return "ID = " + id + "\nFan speed = " + speed 
-				+ "\nRadius = " + radius + "\nColor = " + color + "\nThe fan is on :)";
+			return "\nThe fan is on :)";
 		}
 		else {
-			return "ID = " + id + "\nRadius = " + radius + "\nColor = " + color + "\nThe fan is off";
+			return "\nThe fan is off";
+		}
+	}
+
+	//To String to convert data into a string
+	@Override
+	public String toString() {
+		return "ID = " + id + "\nFan speed = " + speed 
+				+ "\nRadius = " + radius + "\nColor = " + color + "\n"+ isOn();
 		}
 	}
 	
@@ -80,4 +86,4 @@ public class Fan {
 	
 	
 
-}
+

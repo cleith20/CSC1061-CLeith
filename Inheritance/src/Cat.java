@@ -15,6 +15,10 @@ public class Cat extends Animal {
 		 this.lengthOfWhiskers = lengthOfWhiskers;
 	 }
 	 
+	 
+	 public int getLengthOfWhiskers() {
+		return lengthOfWhiskers;
+	}
 	 @Override
 	 public String makesSound() {
 			return "Meow";
