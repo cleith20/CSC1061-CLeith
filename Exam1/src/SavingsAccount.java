@@ -23,7 +23,7 @@ public class SavingsAccount extends Account{
 	public void deposit(double num) {
 		double balance = getBalance() + num;
 		setBalance(balance);
-		transactions.add(new Transactions(LocalDate.now(), 'D',num, balance));
+		transactions.add(new Transaction(LocalDate.now(), 'D',num, balance));
 		
 	}
 	@Override
@@ -37,7 +37,7 @@ public class SavingsAccount extends Account{
 			}
 		double balance = getBalance() -num;
 		setBalance(balance);
-		transactions.add(new Transactions(LocalDate.now(), 'W',num, balance));
+		transactions.add(new Transaction(LocalDate.now(), 'W',num, balance));
 		}
 	}
 
