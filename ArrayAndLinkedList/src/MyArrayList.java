@@ -32,9 +32,28 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public Iterator<T> iterator() {
-		return null;
+		return new MyIterator();
 	}
+	private class MyIterator implements Iterator<T>{
+		
+		private int index = 0;
+		
+		@Override
+		public boolean hasNext() {
+			if(index < size) {
+				return true;
+			}
+			return false;
+		}
 
+		@Override
+		public T next() {
+			if(index >= size) {
+				throw new IndexOutOfBoundsException("Index exceeds size.");
+			}
+			return array[index++];
+		}	
+	}
 	@Override
 	public Object[] toArray() {
 		return null;
@@ -62,7 +81,12 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public boolean remove(Object o) {
-		return false;
+		int index = indexOf(o);
+		if (index < 0) {
+			return false;
+		}
+		remove(index);
+		return true;
 	}
 
 	@Override
@@ -82,9 +106,10 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public boolean removeAll(Collection<?> c) {
-		boolean flag = true;
-		for(Object obj : c) {
-			flag &= remove(obj);
+		boolean flag = false;
+		for (Object obj : c) {
+			if (remove(obj))
+				flag = true;
 		}
 		return flag;
 	}
@@ -101,7 +126,7 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public T get(int index) {
-		if(index < 0 || index > size) {
+		if (index < 0 || index > size) {
 			throw new IndexOutOfBoundsException(); // exit out of this method
 		}
 		return array[index];
@@ -116,14 +141,14 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public void add(int index, T element) {
-		if(index < 0 || index > size) {
+		if (index < 0 || index > size) {
 			throw new IndexOutOfBoundsException();
 		}
 		// add the element to the resizing of the array
 		add(element);
 		// shift the elements
-		for(int i = size-1; i > index; i--) {
-			array[i] = array [i-1];
+		for (int i = size - 1; i > index; i--) {
+			array[i] = array[i - 1];
 		}
 		// put the new element in the right place
 		array[index] = element;
@@ -132,8 +157,8 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T remove(int index) {
 		T old = get(index);
-		for(int i = index; i < size; i++) {
-			array[i] = array[i+1];
+		for (int i = index; i < size; i++) {
+			array[i] = array[i + 1];
 		}
 		size--;
 		return old;
@@ -141,8 +166,8 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public int indexOf(Object o) {
-		for(int i = 0; i < size; i++) {
-			if(equals(array[i], o)) {
+		for (int i = 0; i < size; i++) {
+			if (equals(array[i], o)) {
 				return i;
 			}
 		}
@@ -150,16 +175,16 @@ public class MyArrayList<T> implements List<T> {
 	}
 
 	private boolean equals(T t, Object o) {
-		if (t == null || o == null ) {
+		if (t == null || o == null) {
 			return false;
 		}
-		return t.equals(o);	
+		return t.equals(o);
 	}
 
 	@Override
 	public int lastIndexOf(Object o) {
-		for(int i = size-1; i >= 0; i--) {
-			if(equals(array[i], o)) {
+		for (int i = size - 1; i >= 0; i--) {
+			if (equals(array[i], o)) {
 				return i;
 			}
 		}

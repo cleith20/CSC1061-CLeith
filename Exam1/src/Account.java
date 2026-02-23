@@ -9,7 +9,7 @@ public abstract class Account implements Withdrawable, Depositable{
 	private double annualInterestRate = 0.0;
 	private LocalDate dateCreated = LocalDate.now();
 	private String name;
-	protected List<Transactions> transactions = new ArrayList<>();
+	protected List<Transaction> transactions = new ArrayList<>();
 	
 	// Constructors
 	public Account() {
@@ -56,7 +56,7 @@ public abstract class Account implements Withdrawable, Depositable{
 	public String getName() {
 		return name;
 	}
-	public List<Transactions> getTransactions() {
+	public List<Transaction> getTransactions() {
 		return transactions;
 	}
 	
