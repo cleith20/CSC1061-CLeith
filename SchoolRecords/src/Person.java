@@ -1,10 +1,21 @@
-
+/**
+ * Defines Person
+ * 
+ */
 public class Person {
 	private String firstName;
 	private String address;
 	private long phoneNum;
 	private String email;
 	
+	/**
+	 * Creates a new Person
+	 * @param name - first name
+	 * @param address - street address
+	 * @param phoneNum - phone number
+	 * @param email - email address
+	 *
+	 */
 	public Person(String name, String address, long phoneNum, String email) {
 		this.firstName = name;
 		this.address = address;
