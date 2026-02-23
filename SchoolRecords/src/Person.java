@@ -1,6 +1,5 @@
 
 public class Person {
-	// Data Members
 	private String firstName;
 	private String address;
 	private long phoneNum;

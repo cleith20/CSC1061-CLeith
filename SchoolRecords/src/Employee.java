@@ -1,7 +1,6 @@
 import java.time.LocalDate;
 
 public class Employee extends Person {
-	// Data Members
 	private String office;
 	private double salary;
 	private LocalDate dateHired;
