@@ -1,6 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Tests each Class for School Records, creates a list of each object that is created,
+ * writes list to database, reads data from the database into an ArrayList
+ * 
+ * @author Cameron Leith
+ * @version 1
+ * 
+ */
 public class TestSchoolRecords {
 
 	public static void main(String[] args) {

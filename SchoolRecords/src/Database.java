@@ -5,6 +5,11 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+/**
+ * Creates new databases and contains methods to read and write to files
+ * 
+ * 
+ */
 
 public class Database {
 	private File personDatabase = new File("PersonDatabase.csv");
@@ -30,7 +35,10 @@ public class Database {
 			System.exit(-1);
 		}
 	}
-	
+	/**
+	 * Converts Person objects into a .csv file
+	 * @param a Person and any of its subclasses
+	 */
 	public void writePerson(Person person) {
 		printer.print(person.getClass().getName());
 		printer.print("," + person.getFirstName());
@@ -57,6 +65,10 @@ public class Database {
 		printer.println();
 		printer.flush();
 	}
+	/**
+	 * Converts elements of a .csv file into an ArrayList
+	 * @return List of all each Person in the Database
+	 */
 	public List<Person> readDatabase() {
 		String line;
 		List<Person> people = new ArrayList<>();
