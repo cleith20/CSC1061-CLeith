@@ -80,7 +80,6 @@ public class MyDoubleLinkedList<E> implements List<E> {
 			throw new UnsupportedOperationException("List does not contain object");
 		else {
 			int index = indexOf(o);
-			Node newNode = new Node(o);
 		}
 		return false;
 	}
