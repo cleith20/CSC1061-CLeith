@@ -34,6 +34,8 @@ public class MyDoubleLinkedList<E> implements List<E> {
 
 	@Override
 	public boolean contains(Object o) {
+		if(indexOf(o) >= 0)
+			return true;
 		return false;
 	}
 
@@ -74,7 +76,12 @@ public class MyDoubleLinkedList<E> implements List<E> {
 
 	@Override
 	public boolean remove(Object o) {
-
+		if(!contains(o))
+			throw new UnsupportedOperationException("List does not contain object");
+		else {
+			int index = indexOf(o);
+			Node newNode = new Node(o);
+		}
 		return false;
 	}
 
@@ -195,18 +202,25 @@ public class MyDoubleLinkedList<E> implements List<E> {
 	@Override
 	public int indexOf(Object o) {
 		Node node = head;
-		for (int i = 0; i < size; i++) {
+		for (int i = 0; i < size; i++){
 			if (((E)o).equals(node.data)) {
 				return i;
 			}
+			node = node.next;
 		}
 		return -1;
 	}
 
 	@Override
 	public int lastIndexOf(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+		Node node = tail;
+		for (int i = size-1; i >= 0; i--) {
+			if (((E)o).equals(node.data)) {
+				return i;
+			}
+			node = node.prev;
+		}
+		return -1;
 	}
 
 	@Override
