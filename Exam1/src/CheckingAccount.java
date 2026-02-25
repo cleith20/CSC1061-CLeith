@@ -33,7 +33,7 @@ public class CheckingAccount extends Account {
 	@Override
 	public void withdraw(double num) {
 		if(getBalance() - num < (0-overdraftLimit)) {
-			System.out.println("Withdraw exceeds overdraft limit.");
+			throw new UnsupportedOperationException("Withdraw exceeds overdraft limit.");
 		}
 		else {
 			double balance = getBalance() -num;
