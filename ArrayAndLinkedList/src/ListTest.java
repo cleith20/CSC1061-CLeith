@@ -5,7 +5,7 @@ public class ListTest {
 
 	public static void main(String[] args) {
 		
-		List<Integer> myArrList = new MyDoubleLinkedList<>();
+		List<Integer> myArrList = new MyArrayList<>();
 
 		myArrList.add(1);
 		myArrList.add(4);
@@ -19,17 +19,40 @@ public class ListTest {
 		for(int i = 0; i < myArrList.size(); i++) {
 			System.out.print(myArrList.get(i) + " ");
 		}
-//		System.out.println();
-//		for(Integer num : myArrList) {
-//			System.out.print(num + " ");
-//		}
-//		System.out.println();
-//		
-//		Iterator iter = myArrList.iterator();
-//		while(iter.hasNext()) {
-//			Integer ans = (Integer)iter.next();
-//			System.out.print(ans + " ");
-//		}
+		System.out.println();
+		for(Integer num : myArrList) {
+			System.out.print(num + " ");
+		}
+		System.out.println();
+		
+		Iterator iter = myArrList.iterator();
+		while(iter.hasNext()) {
+			Integer ans = (Integer)iter.next();
+			System.out.print(ans + " ");
+		}
+		System.out.println();
+	
+	//Test Linked List
+		List<Integer> ll = new MyDoubleLinkedList<>();
+	
+		ll.add(8);
+		ll.add(7);
+		ll.add(6);
+		ll.add(5);
+		ll.add(9);
+		
+		// Traverse the linked list
+		// Inefficient, quadratic, restarts at head for each pass through
+		// default should be for each loop
+		for(int i = 0; i < ll.size(); i++) {
+			System.out.print(ll.get(i) + " ");
+		}
+		System.out.println();
+		
+		for(Integer x : ll) {
+			System.out.print(x + " ");
+		}
 	}
+	
 
 }
