@@ -10,6 +10,8 @@ public class PlayListManager {
 		MyPlaylist.add(new Song("Can't Say", "Travis Scott"));
 		MyPlaylist.add(new Song("Low", "SZA"));
 		MyPlaylist.add(new Song("Alien Superstar", "Beyonce"));
+		MyPlaylist.add(new Song("United in Grief", "Kendrick Lamar"));
+		
 		
 	}
 
