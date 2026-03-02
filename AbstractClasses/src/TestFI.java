@@ -13,7 +13,7 @@ public class TestFI {
 		List<FinancialInstitution> fiList = new LinkedList<>();
 
 		Bank b1 = new Bank("Bank of America");
-		
+		int one = 1;
 		
 		fiList.add(b1);
 		System.out.println("Bank of America's interest rate is " + b1.getInterestRate() * 100 + "%");
