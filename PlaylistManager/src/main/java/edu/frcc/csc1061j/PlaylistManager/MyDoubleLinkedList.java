@@ -12,7 +12,7 @@ public class MyDoubleLinkedList<E> implements List<E> {
 
 	private class Node {
 		public E data;
-		public Node next; // points to another instance of its self
+		public Node next;
 		public Node prev;
 
 		public Node(E data) {
@@ -80,11 +80,9 @@ public class MyDoubleLinkedList<E> implements List<E> {
 		Node newNode = new Node(e);
 		if (head == null) {
 			head = newNode;
-//			tail = newNode;
 		} else {
 			tail.next = newNode;
 			newNode.prev = tail;
-//			tail = newNode;
 		}
 		tail = newNode;
 		size++;

@@ -5,14 +5,16 @@ import java.util.List;
 public class PlayListManager {
 
 	public static void main(String[] args) {
-		List<Song> MyPlaylist = new MyDoubleLinkedList<>();
+		List<Song> myPlaylist = new MyDoubleLinkedList<>();
 		
-		MyPlaylist.add(new Song("Can't Say", "Travis Scott"));
-		MyPlaylist.add(new Song("Low", "SZA"));
-		MyPlaylist.add(new Song("Alien Superstar", "Beyonce"));
-		MyPlaylist.add(new Song("United in Grief", "Kendrick Lamar"));
+		myPlaylist.add(new Song("Can't Say", "Travis Scott"));
+		myPlaylist.add(new Song("Low", "SZA"));
+		myPlaylist.add(new Song("Alien Superstar", "Beyonce"));
+		myPlaylist.add(new Song("United in Grief", "Kendrick Lamar"));
 		
-		
+		for(Song song : myPlaylist) {
+			System.out.println(song);
+		}
 	}
 
 }
