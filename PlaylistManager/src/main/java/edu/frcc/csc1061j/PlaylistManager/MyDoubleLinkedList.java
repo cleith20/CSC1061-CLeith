@@ -1,4 +1,5 @@
 package edu.frcc.csc1061j.PlaylistManager;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -65,13 +66,13 @@ public class MyDoubleLinkedList<E> implements List<E> {
 
 	@Override
 	public Object[] toArray() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	@Override
 	public <T> T[] toArray(T[] a) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
@@ -102,31 +103,31 @@ public class MyDoubleLinkedList<E> implements List<E> {
 
 	@Override
 	public boolean containsAll(Collection<?> c) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	@Override
 	public boolean addAll(Collection<? extends E> c) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	@Override
 	public boolean addAll(int index, Collection<? extends E> c) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	@Override
 	public boolean removeAll(Collection<?> c) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
 	@Override
 	public boolean retainAll(Collection<?> c) {
-		// TODO Auto-generated method stub
+
 		return false;
 	}
 
@@ -242,20 +243,37 @@ public class MyDoubleLinkedList<E> implements List<E> {
 
 	@Override
 	public ListIterator<E> listIterator() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	@Override
 	public ListIterator<E> listIterator(int index) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
 	@Override
 	public List<E> subList(int fromIndex, int toIndex) {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
+	public int count() {
+		return size;
+	}
+
+	public void reverse() {
+		Node prevNode = null;
+		Node curNode = head;
+		Node nextNode = null;
+		
+		while(curNode != null) {
+			nextNode = curNode.next;
+			curNode.next = prevNode;
+			prevNode = curNode;
+			curNode = nextNode;
+		}
+		head = prevNode;
+	}
 }

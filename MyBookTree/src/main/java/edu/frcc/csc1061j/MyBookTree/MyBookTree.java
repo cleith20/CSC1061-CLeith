@@ -52,7 +52,34 @@ public class MyBookTree implements Iterable<MyBookNode>{
 
 	@Override
 	public Iterator<MyBookNode> iterator() {
-		return new MyBookIterator();
+		return new RecursiveIterator();
+	}
+	
+	private class RecursiveIterator implements Iterator<MyBookNode> {
+		Deque<MyBookNode> queue = new ArrayDeque<>();
+		
+		public RecursiveIterator() {
+			preorder(root);
+		}
+		private void preorder(MyBookNode node) {
+			queue.add(node);
+			if(node.getChildNodes() == null || node.getChildNodes().isEmpty()) {
+				return;
+			}
+			else {
+				for(MyBookNode child : node.getChildNodes()) {
+					preorder(child);
+				}
+			}
+		}
+		@Override
+		public boolean hasNext() {
+			return !queue.isEmpty();
+		}
+		@Override
+		public MyBookNode next() {
+			return queue.removeFirst();
+		}
 	}
 	
 	private class MyBookIterator implements Iterator<MyBookNode> {

@@ -88,13 +88,13 @@ public class MyBookNode implements Comparable<MyBookNode> {
 			return title;
 		}
 		else if(secNum == 0) {
-			return "\t" + chapNum + " " + title;
+			return "\tChapter " + chapNum + "\n\t  " + title;
 		}
 		else if(subSecNum == 0) {
-			return "\t\t" + secNum + " " + title;
+			return "\t\tSection " + chapNum + "." + secNum + "\n\t\t  " + title;
 		}
 		else {
-			return "\t\t\t" + subSecNum + " " + title;
+			return "\t\t\tSection " + chapNum + "." + secNum + "." + subSecNum + "\n\t\t\t  " + title;
 		}
 
 	}

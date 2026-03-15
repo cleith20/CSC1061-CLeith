@@ -1,6 +1,6 @@
 package edu.frcc.csc1061j.PlaylistManager;
 
-public class Song {
+public class Song implements Comparable<Song>{
 	private String title;
 	private String artist;
 	
@@ -28,6 +28,15 @@ public class Song {
 	@Override
 	public String toString() {
 		return title + " by " + artist;
+	}
+
+	@Override
+	public int compareTo(Song song) {
+		 int artist = this.artist.compareTo(song.artist);
+	        if (artist == 0) {
+	            return this.title.compareTo(song.title);
+	        }
+	        return artist;
 	}
 	
 }
