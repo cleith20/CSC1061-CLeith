@@ -15,7 +15,7 @@ public class Database {
 	Scanner reader;
 
 	public Database(String fileName) {
-		playlistDatabase = new File(fileName +".csv");
+		playlistDatabase = new File(fileName +".txt");
 		try {
 			if (!playlistDatabase.exists()) {
 				playlistDatabase.createNewFile();
@@ -35,8 +35,7 @@ public class Database {
 
 	
 	public void writeSong(Song song) {
-		printer.print(song.getTitle());
-		printer.print("," + song.getArtist());
+		printer.print(song);
 		printer.println();
 		printer.flush();
 	}
@@ -46,7 +45,7 @@ public class Database {
 		List<Song> playlist = new ArrayList<>();
 		while (reader.hasNextLine()) {
 			line = reader.nextLine();
-			String[] tokens = line.split(",");
+			String[] tokens = line.split(" by ");
 			Song song = null;
 			song = new Song(tokens[1].trim(), tokens[2].trim());
 			playlist.add(song);
