@@ -16,7 +16,7 @@ public class MyBookNode implements Comparable<MyBookNode> {
 		this.chapNum = chapNum;
 		this.secNum = secNum;
 		this.subSecNum = subSecNum;
-		this.childNodes = new ArrayList<>();		
+		this.childNodes = new ArrayList<>(4);		
 	}
 
 	public String getTitle() {
