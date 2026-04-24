@@ -10,7 +10,7 @@ public class Driver {
 		while(a.equals("y")) {
 		Play game = new Play();
 		game.play();
-		System.out.println("Play Again? y/n");
+		System.out.println("Do you want to play Again? y/n");
 		 a = scan.next();
 		}
 		System.out.println("Goodbye.");
