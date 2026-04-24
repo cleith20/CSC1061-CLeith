@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"edu.frcc.csc1061j.SpellChecker","c":"SpellChecker","l":"main(String[])","u":"main(java.lang.String[])"},{"p":"edu.frcc.csc1061j.SpellChecker","c":"SpellChecker","l":"SpellChecker()","u":"%3Cinit%3E()"}];updateSearchResults();
