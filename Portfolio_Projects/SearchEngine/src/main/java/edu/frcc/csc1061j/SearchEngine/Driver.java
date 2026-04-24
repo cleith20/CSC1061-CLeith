@@ -24,7 +24,7 @@ public class Driver {
 		String term = scan.next().toLowerCase();
 		String result = index.get(term);
 		if(result == null) {
-			result = "Term not found";
+			result = "The term not found";
 			System.out.println(result);
 		}
 		else {
