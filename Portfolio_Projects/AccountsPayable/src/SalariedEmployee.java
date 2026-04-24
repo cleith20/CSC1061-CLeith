@@ -1,21 +1,21 @@
 
 public class SalariedEmployee extends Employee{
-	private double weeklySalary;
+	private double wkSalary;
 	// Constructor
 	public SalariedEmployee(String firstName, String lastName, long ssNum, double weeklySalary) {
 		super(firstName, lastName, ssNum);
-		this.weeklySalary = weeklySalary;
+		this.wkSalary = weeklySalary;
 	}
 	// Getters and setters
 	public double getWeeklySalary() {
-		return weeklySalary;
+		return wkSalary;
 	}
 	public void setWeeklySalary(double weeklySalary) {
-		this.weeklySalary = weeklySalary;
+		this.wkSalary = weeklySalary;
 	}
 	@Override
 	public double getPaymentAmount() {
-		return weeklySalary;
+		return wkSalary;
 	}
 	@Override
 	public String toString() {
