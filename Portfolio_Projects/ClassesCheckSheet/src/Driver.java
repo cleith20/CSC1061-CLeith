@@ -5,7 +5,7 @@ public class Driver {
 
 	public static void main(String[] args) {
 		InPersonCourse course1 = new InPersonCourse("CSC1061", 20, 20, 3);
-		FullRemoteCourse course2 = new FullRemoteCourse("CSC1061", 20, 20, 3,"donald.duck@frontrange.edu");
+		FullRemoteCourse course2 = new FullRemoteCourse("CSC1061", 20, 20, 3,"daffy.duck@frontrange.edu");
 		RealTimeRemoteCourse course3 = new RealTimeRemoteCourse("CSC1061", 20, 20, 3,"zoom.com");
 
 		List<Course> courseList = new ArrayList<>();
