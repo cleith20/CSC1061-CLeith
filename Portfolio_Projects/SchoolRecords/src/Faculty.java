@@ -4,7 +4,7 @@
  * 
  */
 public class Faculty extends Employee{
-	private String officeHours;
+	private String officeHrs;
 	private String rank;
 	
 	/**
@@ -23,16 +23,16 @@ public class Faculty extends Employee{
 			String email, String office, double salary,
 			String officeHours, String rank) {
 		super(name, address, phoneNum, email, office, salary);
-		this.officeHours = officeHours;
+		this.officeHrs = officeHours;
 		this.rank = rank;
 	}
 
 	public String getOfficeHours() {
-		return officeHours;
+		return officeHrs;
 	}
 
 	public void setOfficeHours(String officeHours) {
-		this.officeHours = officeHours;
+		this.officeHrs = officeHours;
 	}
 
 	public String getRank() {
@@ -45,7 +45,7 @@ public class Faculty extends Employee{
 
 	@Override
 	public String toString() {
-		return super.toString() + "\n	Office Hours= " + officeHours + ", Rank= " + rank + "\n";
+		return super.toString() + "\n	Office Hours= " + officeHrs + ", Rank= " + rank + "\n";
 	}
 	
 	
