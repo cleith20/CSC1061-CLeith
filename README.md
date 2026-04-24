@@ -17,10 +17,8 @@ CSC1061-CLeith/
 
 ## Technologies Used
 
-- **Programming Languages**: Python, Java (or mention any other relevant languages)
-- **Frameworks**: Flask, Spring (or mention relevant frameworks)
-- **Tools**: Git, GitHub, Visual Studio Code (or mention relevant tools)
-- **Databases**: SQLite, PostgreSQL (or mention relevant databases)
+- **Programming Languages**: Java 
+- **Tools**: Git, GitHub, Apache Maven
 
 ## Installation and Setup
 
