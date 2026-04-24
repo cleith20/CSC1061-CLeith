@@ -70,7 +70,7 @@ public class Fan {
 			return "\nFan speed = " + speed + " \nThe fan is on :)";
 		}
 		else {
-			return "\nThe fan is off";
+			return "\nFan is off";
 		}
 	}
 
